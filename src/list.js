@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import { useState } from "react";
 
 export default function Todo({ name, key }) {
   const createDate = new Date().toLocaleDateString();

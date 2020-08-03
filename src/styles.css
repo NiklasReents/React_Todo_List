@@ -9,6 +9,10 @@ input {
   box-shadow: 2px 2px;
 }
 
+#caption {
+  margin: 20px 10px 20px 10px;
+}
+
 .App {
   font-family: sans-serif;
   text-align: left;
@@ -30,11 +34,11 @@ input {
 }
 
 .outer-div {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid grey;
 }
 
 .input {
   margin-bottom: 10px;
   margin-left: 10px;
-  margin-top: -20px;
+  margin-top: 10px;
 }
