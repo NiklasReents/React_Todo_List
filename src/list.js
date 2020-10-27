@@ -37,8 +37,8 @@ export default function Todo({ name, key }) {
         <h4>
           {todoValue} {date}
         </h4>
-        <button onClick={handleEdit}> Edit </button>
-        <button onClick={markAsDeleted}> Delete </button>
+        <button onClick={handleEdit}>Edit</button>
+        <button onClick={markAsDeleted}>Delete</button>
       </div>
       <input
         className="input"

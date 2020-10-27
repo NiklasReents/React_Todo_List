@@ -7,15 +7,15 @@ import "./styles.css";
 export default function App() {
   const [count, setCount] = useState(0);
 
-  function createTodoElement(){ 
+  function createTodoElement() { 
     setCount(count + 1);
   }
   
   return (
     <div className="App">
-      <span><User/></span>
-      <span>{Array(count).fill(<Todo/>)}</span>
-      <span><button onClick={createTodoElement}>+</button></span>
+      <div><User/></div>
+      <div>{Array(count).fill(<Todo/>)}</div>
+      <div><button onClick={createTodoElement}>+</button></div>
     </div>
   );
 }

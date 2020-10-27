@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import "./styles.css";
 
 export default function User({ username }) {
   const [user, setUser] = useState("");
@@ -20,16 +19,15 @@ export default function User({ username }) {
   }
 
   return (
-    <div>
+    <div className="outer-div">
       <input
         id="form-input"
         onChange={getUser}
         className="input"
         placeholder="Type in your username..."
       />
-      <button onClick={showUser}>submit</button>
+      <button onClick={showUser}>Submit</button>
       <h4 id="caption">{displayUser}</h4>
-      <hr/>
     </div>
   );
 }
