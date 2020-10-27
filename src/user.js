@@ -10,7 +10,7 @@ export default function User({ username }) {
     setUser(event.target.value);
   }
 
-  function showUser(event) {
+  function showUser() {
     if (document.getElementById("form-input").value === "") {
       alert("Fill in the form!");
       setDisplayUser("");
@@ -29,7 +29,7 @@ export default function User({ username }) {
       />
       <button onClick={showUser}>submit</button>
       <h4 id="caption">{displayUser}</h4>
-      <hr />
+      <hr/>
     </div>
   );
 }

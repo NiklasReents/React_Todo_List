@@ -33,7 +33,7 @@ export default function Todo({ name, key }) {
   return (
     <div className="outer-div">
       <div className="todo-item" id={"Todo" + key}>
-        <input onClick={markAsDone} type="checkbox" />
+        <input onClick={markAsDone} type="checkbox"/>
         <h4>
           {todoValue} {date}
         </h4>
