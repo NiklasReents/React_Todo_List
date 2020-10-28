@@ -5,16 +5,18 @@ import Todo from "./list";
 import "./styles.css";
 
 export default function App() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
+  const [element, setElement] = useState([]);
 
   function createTodoElement() { 
     setCount(count + 1);
+    setElement(Array(count).fill(<Todo/>));
   }
   
   return (
     <div className="App">
       <div><User/></div>
-      <div>{Array(count).fill(<Todo/>)}</div>
+      <div>{element}</div>
       <div><button onClick={createTodoElement}>+</button></div>
     </div>
   );

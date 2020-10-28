@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Todo({ name, key }) {
+export default function Todo({ name, key = 0 }) {
   const createDate = new Date().toLocaleDateString();
   const [value, setValue] = useState("");
   const [todoValue, setTodoValue] = useState(name);
