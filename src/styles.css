@@ -1,12 +1,16 @@
 button {
   margin-left: 10px;
   border-radius: 5px;
-  background-color: darkgoldenrod;
   box-shadow: 2px 2px;
+  background-color: darkgoldenrod;
 }
 
 input {
   box-shadow: 2px 2px;
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
 }
 
 #caption {
@@ -17,16 +21,20 @@ input {
   font-family: sans-serif;
   text-align: left;
   display: flex;
+  align-items: center;
   flex-direction: column;
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 .todo-item {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  width: 600px;
   padding: 7px;
   color: #333333;
+  background-color: antiquewhite; 
 }
 
 .crossed-line {
@@ -34,8 +42,7 @@ input {
 }
 
 .outer-div {
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border: 1px solid grey;
 }
 
 .input {

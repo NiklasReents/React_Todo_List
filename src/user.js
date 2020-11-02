@@ -19,15 +19,19 @@ export default function User({ username }) {
   }
 
   return (
-    <div className="outer-div">
-      <input
-        id="form-input"
-        onChange={getUser}
-        className="input"
-        placeholder="Type in your username..."
-      />
-      <button onClick={showUser}>Submit</button>
-      <h4 id="caption">{displayUser}</h4>
+    <div className="outer-div todo-item">
+      <div>
+        <input
+          id="form-input"
+          onChange={getUser}
+          className="input"
+          placeholder="Type in your username..."
+        />
+      </div>
+      <div>
+        <button onClick={showUser}>Submit</button>
+        <span id="caption">{displayUser}</span>
+      </div>
     </div>
   );
 }

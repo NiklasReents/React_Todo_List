@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-export default function Todo({ name, key = 0 }) {
+export default function Todo({ name, index, deleteElement }) {
   const createDate = new Date().toLocaleDateString();
   const [value, setValue] = useState("");
   const [todoValue, setTodoValue] = useState(name);
@@ -21,31 +21,28 @@ export default function Todo({ name, key = 0 }) {
   }
 
   function markAsDone() {
-    const clickEvent = document.getElementById("Todo" + key);
+    const clickEvent = document.getElementById("Todo" + index);
     clickEvent.classList.toggle("crossed-line");
   }
 
-  function markAsDeleted() {
-    setTodoValue("");
-    setDate("");
-  }
-
   return (
-    <div className="outer-div">
-      <div className="todo-item" id={"Todo" + key}>
-        <input onClick={markAsDone} type="checkbox"/>
-        <h4>
+    <div className="outer-div todo-item">
+      <div id={"Todo" + index}>
+        <input onClick={markAsDone} type="checkbox" />
+        <span>
           {todoValue} {date}
-        </h4>
-        <button onClick={handleEdit}>Edit</button>
-        <button onClick={markAsDeleted}>Delete</button>
+        </span>
       </div>
-      <input
-        className="input"
-        onChange={handleChange}
-        value={value}
-        placeholder="Edit"
-      />
+      <div>
+        <input
+          className="input"
+          onChange={handleChange}
+          value={value}
+          placeholder="Edit"
+        />
+        <button onClick={handleEdit}>Edit</button>
+        <button onClick={() => deleteElement(index)}>Delete</button>
+      </div>
     </div>
   );
 }
