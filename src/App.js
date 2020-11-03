@@ -22,8 +22,6 @@ export default function App() {
     dynamically delete todo elements*/
   };
 
-  console.log(element);
-
   return (
     <div className="App">
       <div>
@@ -31,7 +29,7 @@ export default function App() {
       </div>
       <div>{element}</div>
       <div>
-        <button onClick={createTodoElement}>+</button>
+        <button onClick={createTodoElement}>Add Todo</button>
       </div>
     </div>
   );
